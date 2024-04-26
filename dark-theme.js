@@ -1,5 +1,4 @@
 function changeEditorBackgroundColor() {
-  // Check if the code editor element exists on the page
   const codeEditor = document.querySelector('.ace_content');
 
   if (codeEditor) {
@@ -21,11 +20,9 @@ function test() {
 window.addEventListener('load', test);
 
 function changeTextColors() {
-  // Find all elements with class
   const codeEditors = document.querySelectorAll('.ace_content');
 
   codeEditors.forEach(codeEditor => {
-    // Get the computed style of the element
     const computedStyle = window.getComputedStyle(codeEditor);
     const textColor = computedStyle.color;
 
@@ -50,10 +47,8 @@ function changeAceStringTextColorToRedImportant() {
 
   const nestedElements = document.querySelectorAll('.nested-class .ace_string');
 
-  // Iterate through each matching element
   nestedElements.forEach(element => {
-    // Change the text color to red with !important
-    element.style.setProperty('color', 'red', 'important');
+    element.style.setProperty('color', 'blue', 'important');
   });
 }
 
